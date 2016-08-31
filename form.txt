@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Information</title>
+</head>
+<body>
+	
+	<h2 style="color:blue;"><i>Personal Details</h2></i>
+	<body style="background-color:lightblue;">
+	<a href="http://www.google.com">Go to google</a>
+	<img src="google.png" alt="google.com" width="220" height="120">
+	<br></br>
+	
+	<form action="form.php" method="post">
+	Name<br>
+	<input type="text" name ="name" id="name"><br></br>
+	Email<br>
+	<input type="text" name ="email" id="email"><br></br>
+	Phone no:<br>
+	<input type="text" name ="phone_no"  id="phone_no"><br></br>
+	<input type="Submit" value ="Submit" name = "Submit">
+	</form>
+	<?php
+	if(!empty($_POST['Submit']))
+	{
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$phone_no = $_POST['phone_no'];
+	
+	echo "My name is: " . $name . "<br>" . "Email: " . $email . "<br>" . "Phone_no: " . $phone_no; 
+	}
+	?>
+	
+	
+</body>
+	
+</html>
+
